@@ -1,0 +1,7 @@
+<main class="pokemon__container">
+  <div class="pokemon-card" *ngFor="let pokemon of pokemonList">
+    <p>{{ pokemon.name }}</p>
+    <img class="pokemon-image" [src]="pokemon.image" alt="" />
+    <button (click)="showInfo(pokemon)">Info</button>
+  </div>
+</main>

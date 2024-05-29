@@ -1,0 +1,24 @@
+<h1>Add A pokemon !</h1>
+<form [formGroup]="addPokemonForm" (ngSubmit)="onSubmit()">
+  <label>Pokemon Name:</label>
+  <input type="text" formControlName="name" />
+  <label>Pokemon Image:</label>
+  <input type="text" formControlName="image" />
+  <div formGroupName="stats">
+    <h2>Pokemon stats:</h2>
+    <label>HP:</label>
+    <input type="text" formControlName="hp" />
+    <label>Attack:</label>
+    <input type="text" formControlName="attack" />
+    <label>Defense:</label>
+    <input type="text" formControlName="defense" />
+    <label>Special Attack:</label>
+    <input type="text" formControlName="special_attack" />
+    <label>Special Defense:</label>
+    <input type="text" formControlName="special_defense" />
+    <label>Speed:</label>
+    <input type="text" formControlName="speed" />
+  </div>
+
+  <button>Add Pokemon</button>
+</form>

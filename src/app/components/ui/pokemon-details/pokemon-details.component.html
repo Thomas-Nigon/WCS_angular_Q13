@@ -1,0 +1,16 @@
+<main *ngIf="pokemon">
+  <div class="pokemonDetails">
+    <article class="pokemon-title">
+      <h1 class="pokemon-name">{{ pokemon.name }}</h1>
+      <img src="{{ pokemon.image }}" alt="" />
+    </article>
+    <article>
+      <h2>Stats:</h2>
+      <p>attack: {{ pokemon.stats.attack }}</p>
+      <p>defense: {{ pokemon.stats.defense }}</p>
+      <p>special_attack: {{ pokemon.stats.special_attack }}</p>
+      <p>special_defense: {{ pokemon.stats.special_defense }}</p>
+      <p>speed: {{ pokemon.stats.speed }}</p>
+    </article>
+  </div>
+</main>

@@ -1,0 +1,23 @@
+.pokemonDetails {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #ccc;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+.pokemon-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.pokemon-name {
+  text-align: center;
+}
