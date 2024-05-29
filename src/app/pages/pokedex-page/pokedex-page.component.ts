@@ -15,23 +15,26 @@ import { RouterLink } from '@angular/router';
     PokemonDetailsComponent,
     RouterLink,
   ],
-  providers: [PokedexService],
   templateUrl: './pokedex-page.component.html',
   styleUrl: './pokedex-page.component.scss',
 })
 export class PokedexPageComponent {
   pokemonList: Pokemon[] = [];
+  fetchedPokemonList!: Pokemon[];
   pokemon!: Pokemon;
   pokedexService = inject(PokedexService);
 
   ngOnInit() {
     this.pokedexService
-      .getPokemons()
+      .getPokemonList()
       .subscribe(
         (data) => ((this.pokemonList = data), console.log(this.pokemonList))
       );
   }
   onPokemonSelected(pokemon: Pokemon) {
     this.pokemon = pokemon;
+  }
+  addPokemon(pokemon: Pokemon) {
+    this.pokedexService.addPokemon(pokemon);
   }
 }

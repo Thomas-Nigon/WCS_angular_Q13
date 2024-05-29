@@ -20,5 +20,5 @@
     <input type="text" formControlName="speed" />
   </div>
 
-  <button>Add Pokemon</button>
+  <button [disabled]="!addPokemonForm.valid">Add Pokemon</button>
 </form>
